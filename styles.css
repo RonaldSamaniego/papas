@@ -1,78 +1,233 @@
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Roboto:wght@400;500;700;900&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+  --bg-dark: #111111;
+  --bg-light: #f7f3ee;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --primary: #d48b0d;
+  --primary-dark: #a96b00;
+  --text: #1e1e1e;
+  --text-soft: #4f4f4f;
+  --white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.16);
 }
 
-body{
-    font-family: 'Merienda';
-    background-image: url(IMG/papasweb.png);
-    background-attachment: fixed;
-    background-size: cover;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url('IMG/papasweb.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: var(--text);
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.info {
+  background-color: rgba(0, 0, 0, 0.92);
+  color: var(--white);
+  padding: 20px 16px;
+  text-align: center;
+  font-size: clamp(0.8rem, 1vw + 0.5rem, 1.15rem);
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.site-header {
+  padding: 24px 16px 0;
+}
+
+.top-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand {
+  font-family: 'Merienda', cursive;
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.45);
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 1.2rem;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px var(--shadow);
+  backdrop-filter: blur(2px);
+}
+
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 180px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px 24px;
+}
+
+.hero-content {
+  width: min(900px, 100%);
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 30px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+  padding: clamp(2rem, 5vw, 4rem);
+  text-align: center;
+  backdrop-filter: blur(2px);
+}
+
+.eyebrow {
+  display: inline-block;
+  background: rgba(212, 139, 13, 0.12);
+  color: var(--primary-dark);
+  border: 1px solid rgba(212, 139, 13, 0.35);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.hero-content h1 {
+  font-family: 'Merienda', cursive;
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  font-size: clamp(1rem, 1.3vw + 0.6rem, 1.4rem);
+  line-height: 1.6;
+  color: var(--text-soft);
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0.9rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), #f0b64d);
+  color: var(--white);
+  box-shadow: 0 12px 24px rgba(212, 139, 13, 0.25);
+}
+
+.btn-secondary {
+  color: var(--text);
+  border: 2px solid rgba(0, 0, 0, 0.18);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .redes {
-    display: flex;
-    justify-content: center; /* Centra los íconos horizontalmente */
-    gap: 70px; /* Espacio entre cada ícono */
-    margin-top: 70px; /* Espacio superior para bajarlos hacia la parte blanca */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(18px, 4vw, 70px);
+  padding: 10px 20px 30px;
 }
 
-.redes a IMG{
-    width: 40px;
-    display: inline-block;
-    
-    margin-top: 100px;
+.redes a {
+  width: clamp(46px, 5vw, 58px);
+  height: clamp(46px, 5vw, 58px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
 }
 
-.info{
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+.redes a:hover {
+  transform: translateY(-2px) scale(1.05);
 }
 
-header{
-    max-width: 1500px;
-    margin: auto;
-    padding: 30px;
-    display: flex;
-    justify-content: space-between;
-}
-
-section{
-    padding-top: 100px;
-    text-align: center;
-}
-
-section h1{
-    font-size: 80px;
-    color: #000000;
-    padding: 10px 15px;
-    margin-top: 50px;
-}
-
-section a{
-    text-decoration: none;
-    color:#000000;
-    border: 3px solid #000000;
-    padding: 10px 15px;
-    font-size: 18px;
-    margin-top: 50px;
-    display: inline-block;
-    line-height: 1.2;
+.redes img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
 }
 
 .whatsapp {
-    text-align: center; /* Centra el texto del número de WhatsApp */
-    margin-top: 20px; /* Espacio superior para separarlo de las redes sociales */
-    font-size: 18px;
+  text-align: center;
+  padding: 12px 16px 36px;
+  font-size: 1.05rem;
 }
 
 .whatsapp a {
-    color: #000000; /* Color típico de WhatsApp */
-    text-decoration: none;
-    font-weight: bold;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.72);
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  display: inline-block;
+}
+
+@media (max-width: 640px) {
+  .brand {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding: 1.5rem 1.2rem;
+    border-radius: 22px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .redes {
+    gap: 18px;
+  }
 }
