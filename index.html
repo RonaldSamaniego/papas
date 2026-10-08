@@ -1,38 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="PAPAS G&M - Distribuidora de papas peladas y picadas listas para freír." />
     <title>PAPAS G&M</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="info">
-        <p>DISTRIBUIDORA DE PAPAS PELADAS Y PICADAS
-            LISTAS PARA FREÍR AL MAYOR Y MENOR PARA
-            RESTAURANTES, PARRILLAS Y FAST FOOD.</p>
-    </div>        
+      <p>
+        DISTRIBUIDORA DE PAPAS PELADAS Y PICADAS<br />
+        LISTAS PARA FREÍR AL MAYOR Y MENOR PARA RESTAURANTES, PARRILLAS Y FAST FOOD.
+      </p>
+    </div>
 
-    <header>
-        <nav>
-            <!-- Aquí podrías agregar más elementos del menú si es necesario -->
-        </nav>
+    <header class="site-header">
+      <nav class="top-nav" aria-label="Navegación principal">
+        <div class="brand">PAPASGYM</div>
+      </nav>
     </header>
 
-    <section>
-        <h1>PAPASGYM</h1>
-        <a  class="pedido">¡HACÉ TU PEDIDO YA!</a>
-    </section>
+    <main class="hero">
+      <section class="hero-content" aria-labelledby="hero-title">
+        <span class="eyebrow">Calidad y servicio</span>
+        <h1 id="hero-title">PAPASGYM</h1>
+        <p class="subtitle">
+          Papas listas para freír con la mejor calidad para tu negocio, cocina o servicio de delivery.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://wa.me/549110313873?text=Hola%20PAPASGYM%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener noreferrer">
+            ¡HACÉ TU PEDIDO YA!
+          </a>
+          <a class="btn btn-secondary" href="#redes">VER REDES</a>
+        </div>
+      </section>
+    </main>
 
-    <div class="redes">
-        <a href="https://www.facebook.com/PAPASGYM.2024" target="_blank"><img src="IMG/facebook.png" alt="Facebook"></a>
-        <a href="https://www.instagram.com/PAPASGYM2" target="_blank"><img src="IMG/instagram.png" alt="Instagram"></a>
-        <a href="https://www.tiktok.com/@PAPASGYM" target="_blank"><img src="IMG/tiktok.png" alt="TikTok"></a>
-    </div> 
+    <div id="redes" class="redes" aria-label="Redes sociales">
+      <a href="https://www.facebook.com/PAPASGYM.2024" target="_blank" rel="noopener noreferrer" aria-label="Facebook de PAPASGYM">
+        <img src="IMG/facebook.png" alt="Facebook" />
+      </a>
+      <a href="https://www.instagram.com/PAPASGYM2" target="_blank" rel="noopener noreferrer" aria-label="Instagram de PAPASGYM">
+        <img src="IMG/instagram.png" alt="Instagram" />
+      </a>
+      <a href="https://www.tiktok.com/@PAPASGYM" target="_blank" rel="noopener noreferrer" aria-label="TikTok de PAPASGYM">
+        <img src="IMG/tiktok.png" alt="TikTok" />
+      </a>
+    </div>
 
     <div class="whatsapp">
-        <p><a target="_blank">WhatsApp: 118 031 3873</a></p>
+      <p>
+        <a href="https://wa.me/549110313873" target="_blank" rel="noopener noreferrer">WhatsApp: 11 8031 3873</a>
+      </p>
     </div>
-    
-</body>
+  </body>
 </html>
